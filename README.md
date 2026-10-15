@@ -5,9 +5,9 @@ A small, dependency-free Python program that simulates **DFAs** (Deterministic F
 - Runs a demo immediately, then offers an optional interactive menu
 
 
-### Sample output
+## Sample output
 
-# DEMO 1: DFA — accepts binary strings ending in 1
+#### DEMO 1: DFA — accepts binary strings ending in 1
 
 q0 → q1 → q0 → q1 → q0 → q1
 String: 10101
@@ -18,7 +18,7 @@ String: 1000
 Result: REJECTED
 
 
-# DEMO 2: NFA — accepts strings containing substring '01'
+#### DEMO 2: NFA — accepts strings containing substring '01'
 
 {q0} → {q0} → {q0} → {q0,q1} → {q0,q2}
 String: 1101
@@ -39,25 +39,29 @@ In every diagram, the arrow from nowhere marks the start state and a double circ
 
 ### 1. DFA: binary strings ending in `1`
 
-![DFA ends in 1](images/dfa_ends_in_1.svg)
+<img width="610" height="262" alt="Screenshot 2026-10-15 190002" src="https://github.com/user-attachments/assets/815fc3d6-534c-4e56-92a6-a00b9b7be8a9" />
+
 
 ### 2. DFA: binary value is a multiple of 3
 
 Each state stores the value read so far modulo 3 (`q0` = 0, `q1` = 1, `q2` = 2).
 
-![DFA multiple of 3](images/dfa_multiple_of_3.svg)
+<img width="611" height="262" alt="Screenshot 2026-10-15 190046" src="https://github.com/user-attachments/assets/ca0aff17-b402-4743-a321-2e88fe63b54d" />
+
 
 ### 3. NFA: contains the substring `01`
 
 `q0` guesses when the `01` starts: on reading `0` it goes to both `q0` and `q1`.
 
-![NFA contains 01](images/nfa_contains_01.svg)
+<img width="610" height="262" alt="Screenshot 2026-10-15 190138" src="https://github.com/user-attachments/assets/07690a86-cc04-4316-99ba-07c222d1f6a4" />
+
 
 ### 4. NFA with ε-transition: only `a`s or only `b`s
 
 From `q0` the machine can move to `q1` for free (ε) and then loop on `a`, or read `b` and loop in `q2`. Accepted strings: `a*` or `b*` (including the empty string).
 
-![NFA epsilon](images/nfa_epsilon.svg)
+<img width="624" height="262" alt="Screenshot 2026-10-15 190200" src="https://github.com/user-attachments/assets/45f19631-132f-4f5d-8410-c28341dc59cb" />
+
 
 
 
