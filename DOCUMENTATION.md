@@ -166,9 +166,9 @@ If the console has no input available (`EOFError`), the program ends quietly aft
 
 ---
 
-## 7. Adding your own automaton
+## 7. Adding automaton
 
-1. Write a builder function that returns a `DFA` or `NFA`:
+1. A builder function that returns a `DFA` or `NFA`:
 
    ```python
    def example_dfa_even_zeros():
